@@ -72,16 +72,6 @@ Key Highlights:
 
 ---
 
-## 🧩 System Architecture
-
-*(Insert architecture image if available)*  
-Example:
-
-yaml
-Copy code
-
----
-
 ## 📐 Design Documents
 
 Stored inside `/docs`:
@@ -119,9 +109,6 @@ Testing screenshots stored inside:
 /screenshots/regression_test.png
 /screenshots/mutation_test.png
 
-yaml
-Copy code
-
 ---
 
 ## 🛠 Installation & Setup
@@ -130,33 +117,25 @@ Copy code
 git clone https://github.com/r1tvic/v0-leave-application-system-v6
 cd v0-leave-application-system-v6
 
-shell
-Copy code
 
 ### 2. Install Dependencies
 npm install
 
-shell
-Copy code
 
 ### 3. Create `.env.local`
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
 
-shell
-Copy code
+
 
 ### 4. Start Development Server
 npm run dev
 
-shell
-Copy code
+
 
 ### 5. Deploy to Vercel
 vercel
 
-yaml
-Copy code
 
 ---
 
@@ -177,8 +156,7 @@ project/
 |-- public/
 |-- README.md
 
-yaml
-Copy code
+
 
 ---
 
@@ -202,8 +180,7 @@ Add your demo link here:
 
 https://your-demo-link.com
 
-yaml
-Copy code
+
 
 ---
 
@@ -213,8 +190,7 @@ Store your final PDF here:
 
 /docs/DA3_Project_Report.pdf
 
-yaml
-Copy code
+
 
 Report includes:
 - Problem Statement  
