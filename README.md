@@ -1,28 +1,30 @@
-🌐 Online Leave Application System
+<span style="font-size:32px; font-weight:700;">🌐 Online Leave Application System</span>
 
-A modern web-based leave management system built with Next.js, Supabase, and Vercel.
+A modern web-based leave management system built using Next.js, Supabase, and Vercel.
 
 <p align="center"> <img src="https://img.shields.io/badge/Framework-Next.js-black" /> <img src="https://img.shields.io/badge/Database-Supabase-3FCF8E" /> <img src="https://img.shields.io/badge/Deployment-Vercel-000000" /> <img src="https://img.shields.io/badge/Language-JavaScript-blue" /> <img src="https://img.shields.io/badge/Status-Active-brightgreen" /> </p>
-📌 Overview
+<span style="font-size:26px; font-weight:700;">📌 Overview</span>
 
-The Online Leave Application System is a full-stack web application designed to simplify the process of submitting, reviewing, tracking, and managing leave requests within an institution.
+The Online Leave Application System simplifies the process of submitting, reviewing, and managing leave requests in an institution.
 
-Built using Next.js, Supabase, and Tailwind CSS, the project provides:
+It offers:
 
-A simple interface for students to submit leave applications
+📄 Student leave submission
 
-A clean admin panel for approving or rejecting requests
+🔍 Tracking leave status
 
-A fully cloud-hosted experience (Vercel + Supabase)
+🛠 Admin approval workflow
 
-Secure authentication with email domain restriction
+🔐 Authentication with domain restriction
 
-Persistent login sessions (no auto-logout)
+🌐 Cloud deployment via Vercel
 
-🚀 Features
-Student Features
+💾 Supabase Auth + Database
 
-Sign-up & log in (email must end with @vitstudent.ac.in)
+<span style="font-size:26px; font-weight:700;">🚀 Features</span>
+<span style="font-size:22px; font-weight:700;">Student Features</span>
+
+Sign-up & Login using @vitstudent.ac.in
 
 No email verification required
 
@@ -30,34 +32,36 @@ Submit leave applications
 
 View leave request history
 
-Track leave status (Pending / Approved / Rejected)
+Track status (Pending / Approved / Rejected)
 
-Manual logout (no session timeout)
+Manual logout (session never expires automatically)
 
-Admin Features
+<span style="font-size:22px; font-weight:700;">Admin Features</span>
 
-Login using pre-defined admin account:
-
+Predefined admin credentials:
 Email: admin@vitc.ac.in
-
 Password: admin
 
 View all pending leave requests
 
-Approve or reject requests with comments
+Approve / Reject requests with comments
 
-View all student leave histories
+Access all student leave histories
 
-🔐 Authentication Rules
+<span style="font-size:26px; font-weight:700;">🔐 Authentication Rules</span>
 
-✔ Only emails ending with @vitstudent.ac.in can sign up
-✔ Admin email is manually created and bypasses domain restriction
+✔ Only emails ending with @vitstudent.ac.in can create accounts
+
+✔ Admin login uses a predefined, manually created account
+
 ✔ No email verification required
-✔ Sessions never expire automatically
-✔ Users stay logged in until manually logged out
 
-📁 Tech Stack
-Frontend
+✔ No auto-logout (session persistent until manual logout)
+
+✔ Secure password-based login via Supabase Auth
+
+<span style="font-size:26px; font-weight:700;">📁 Tech Stack</span>
+<span style="font-size:22px; font-weight:700;">Frontend</span>
 
 Next.js 14
 
@@ -65,23 +69,23 @@ React
 
 Tailwind CSS
 
-Backend / Database
+<span style="font-size:22px; font-weight:700;">Backend / Database</span>
 
 Supabase Authentication
 
 Supabase PostgreSQL
 
-Supabase Policies & Edge Functions (optional)
+Optional: Supabase Edge Functions
 
-Deployment
+<span style="font-size:22px; font-weight:700;">Deployment</span>
 
 Vercel (CI/CD via GitHub)
 
-Version Control
+<span style="font-size:22px; font-weight:700;">Version Control</span>
 
 GitHub
 
-🧩 System Architecture
+<span style="font-size:26px; font-weight:700;">🧩 System Architecture</span>
 flowchart LR
     User([Student User]) --> Frontend[Next.js Frontend]
     Frontend --> Auth[Supabase Auth]
@@ -89,81 +93,75 @@ flowchart LR
     Admin([Admin User]) --> Frontend
     Frontend --> DB
 
-📐 Design Documents
+<span style="font-size:26px; font-weight:700;">📐 Design Documents</span>
+
+All design diagrams are included in the /docs folder:
+
 ✔ System Architecture
+
 ✔ System Design
-✔ SRS (Software Requirement Specification)
-✔ DFD (Data Flow Diagram)
-✔ ERD (Entity Relationship Diagram)
+
+✔ SRS
+
+✔ DFD
+
+✔ ERD
+
 ✔ UML Diagrams
 
-Use Case Diagram
+Use Case
 
-Class Diagram
+Class
 
-Sequence Diagram (Apply Leave + Approve Leave)
+Sequence
 
-Activity Diagram
+Activity
 
-All diagrams included in /docs folder (or add your links here).
+<span style="font-size:26px; font-weight:700;">🧪 Testing</span>
+<span style="font-size:22px; font-weight:700;">💡 Integration Testing</span>
 
-🧪 Testing
+End-to-end validation of:
 
-This project includes:
+Login → Apply → DB Insert → Status Update
 
-Integration Testing
+<span style="font-size:22px; font-weight:700;">♻ Regression Testing</span>
 
-Login → Apply → DB insert → Status display
+Ensuring no existing functionality breaks after updates.
 
-Regression Testing
+<span style="font-size:22px; font-weight:700;">🧬 Mutation Testing</span>
 
-Re-run tests after new features (approval workflow, domain validation)
+Testing system behavior under invalid/mutated inputs.
 
-Mutation Testing
+<span style="font-size:22px; font-weight:700;">📸 Test Screenshots</span>
 
-Invalid inputs
-
-Empty reason
-
-Wrong date order
-
-Screenshots
-
-Add your actual screenshots here:
+Add your screenshots in:
 
 /screenshots/integration_test.png
 /screenshots/regression_test.png
 /screenshots/mutation_test.png
 
-🛠️ Installation & Setup
-
-Clone the project:
-
+<span style="font-size:26px; font-weight:700;">🛠️ Installation & Setup</span>
+<span style="font-size:22px; font-weight:700;">Clone the repository</span>
 git clone https://github.com/yourusername/leave-application-system.git
 cd leave-application-system
 
-
-Install dependencies:
-
+<span style="font-size:22px; font-weight:700;">Install dependencies</span>
 npm install
 
+<span style="font-size:22px; font-weight:700;">Environment variables</span>
 
-Create a .env.local file:
+Create .env.local:
 
-NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
-NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
 
-
-Run the project:
-
+<span style="font-size:22px; font-weight:700;">Run the project</span>
 npm run dev
 
-
-Deploy to Vercel:
-
+<span style="font-size:22px; font-weight:700;">Deploy to Vercel</span>
 vercel
 
-📦 Folder Structure
+<span style="font-size:26px; font-weight:700;">📦 Folder Structure</span>
 project/
 │── app/
 │   ├── login/
@@ -177,9 +175,9 @@ project/
 │── screenshots/
 │── README.md
 
-📸 Screenshots
+<span style="font-size:26px; font-weight:700;">📸 Screenshots</span>
 
-Add your project UI screenshots:
+Add your images:
 
 Login Page
 
@@ -187,35 +185,34 @@ Signup Page
 
 User Dashboard
 
-Apply Leave Screen
+Apply Leave Form
 
 Leave History
 
 Admin Pending Requests
 
-Approve/Reject Screen
+Approve / Reject Screens
 
-🎥 Project Demo
+<span style="font-size:26px; font-weight:700;">🎥 Project Demo</span>
 
-👉 Add your demo video link here once recorded
-(e.g., YouTube, Google Drive, Loom)
+📌 Add your video demo link here (YouTube, Drive, or Loom)
 
-📚 Project Report (DA3 PDF)
+<span style="font-size:26px; font-weight:700;">📚 Project Report (DA3 PDF)</span>
 
 Your full project report is included in:
 
 /docs/DA3_Project_Report.pdf
 
 
-It includes:
+Includes:
 
 Problem Statement
 
 User Stories
 
-Architecture & Design
+Architecture & System Design
 
-Test Cases
+Test Plan
 
 SRS
 
@@ -227,12 +224,12 @@ UML
 
 GitHub Link
 
-👨‍💻 Author
+<span style="font-size:26px; font-weight:700;">👨‍💻 Author</span>
 
 Ritvic Vijay
 23BCE1800
 Vellore Institute of Technology
 
-⭐ Show Support
+<span style="font-size:26px; font-weight:700;">⭐ Support</span>
 
-If you found this project useful, consider giving the repo a star ⭐ on GitHub!
+If you found this project useful, please consider starring ⭐ the repo on GitHub!
