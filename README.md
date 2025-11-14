@@ -163,18 +163,19 @@ Copy code
 ## 📂 Folder Structure
 
 project/
-│── app/
-│ ├── login/
-│ ├── signup/
-│ ├── dashboard/
-│ ├── admin/
-│ ├── api/
-│── components/
-│── lib/
-│── docs/
-│── screenshots/
-│── public/
-│── README.md
+├── app/
+│   ├── login/
+│   ├── signup/
+│   ├── dashboard/
+│   ├── admin/
+│   ├── api/
+├── components/
+├── lib/
+├── docs/
+├── screenshots/
+├── public/
+├── README.md
+
 
 yaml
 Copy code
