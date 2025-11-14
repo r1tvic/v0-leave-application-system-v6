@@ -2,6 +2,8 @@
 
 A full-stack web application built using Next.js, Supabase, and Vercel for managing student leave requests with admin approval features.
 
+<p align="center"> <img src="https://img.shields.io/badge/Framework-Next.js-black" /> <img src="https://img.shields.io/badge/Database-Supabase-3FCF8E" /> <img src="https://img.shields.io/badge/Deployment-Vercel-000000" /> <img src="https://img.shields.io/badge/Language-JavaScript-blue" /> <img src="https://img.shields.io/badge/Status-Active-brightgreen" /> </p>
+
 GitHub Repository:  
 https://github.com/r1tvic/v0-leave-application-system-v6
 
