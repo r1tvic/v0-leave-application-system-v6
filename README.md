@@ -1,235 +1,241 @@
-<span style="font-size:32px; font-weight:700;">🌐 Online Leave Application System</span>
+# Online Leave Application System
 
-A modern web-based leave management system built using Next.js, Supabase, and Vercel.
+A full-stack web application built using Next.js, Supabase, and Vercel for managing student leave requests with admin approval features.
 
-<p align="center"> <img src="https://img.shields.io/badge/Framework-Next.js-black" /> <img src="https://img.shields.io/badge/Database-Supabase-3FCF8E" /> <img src="https://img.shields.io/badge/Deployment-Vercel-000000" /> <img src="https://img.shields.io/badge/Language-JavaScript-blue" /> <img src="https://img.shields.io/badge/Status-Active-brightgreen" /> </p>
-<span style="font-size:26px; font-weight:700;">📌 Overview</span>
+GitHub Repository:  
+https://github.com/r1tvic/v0-leave-application-system-v6
 
-The Online Leave Application System simplifies the process of submitting, reviewing, and managing leave requests in an institution.
+---
 
-It offers:
+## 📌 Overview
 
-📄 Student leave submission
+The Online Leave Application System streamlines the process of submitting, approving, managing, and tracking leave requests inside an institution.
 
-🔍 Tracking leave status
+Key Highlights:
+- Student leave application  
+- Admin approval workflow  
+- Domain-restricted authentication  
+- Persistent login sessions (no auto logout)  
+- Cloud deployment via Vercel + Supabase  
 
-🛠 Admin approval workflow
+---
 
-🔐 Authentication with domain restriction
+## 🚀 Features
 
-🌐 Cloud deployment via Vercel
+### Student Features
+- Sign-up & login using **@vitstudent.ac.in**
+- **No email verification required**
+- Apply for leave
+- View leave status (Pending / Approved / Rejected)
+- View complete leave history
+- Manual logout (session never expires)
 
-💾 Supabase Auth + Database
+### Admin Features
+- Login using predefined credentials:  
+  - Email: **admin@vitc.ac.in**  
+  - Password: **admin**
+- View all pending leave requests
+- Approve or reject with comments
+- View complete leave history for all users
 
-<span style="font-size:26px; font-weight:700;">🚀 Features</span>
-<span style="font-size:22px; font-weight:700;">Student Features</span>
+---
 
-Sign-up & Login using @vitstudent.ac.in
+## 🔐 Authentication Rules
 
-No email verification required
+- Only **@vitstudent.ac.in** emails may sign up  
+- Admin account is predefined  
+- No email verification required  
+- No session timeout — manual logout only  
+- Supabase Auth manages authentication & session storage  
 
-Submit leave applications
+---
 
-View leave request history
+## 🛠 Tech Stack
 
-Track status (Pending / Approved / Rejected)
+### Frontend
+- Next.js 14  
+- React  
+- Tailwind CSS  
 
-Manual logout (session never expires automatically)
+### Backend
+- Supabase Authentication  
+- Supabase PostgreSQL Database  
+- (Optional) Supabase Edge Functions  
 
-<span style="font-size:22px; font-weight:700;">Admin Features</span>
+### Deployment
+- Vercel (Automatic deployment via GitHub)
 
-Predefined admin credentials:
-Email: admin@vitc.ac.in
-Password: admin
+### Version Control
+- GitHub: https://github.com/r1tvic/v0-leave-application-system-v6
 
-View all pending leave requests
+---
 
-Approve / Reject requests with comments
+## 🧩 System Architecture
 
-Access all student leave histories
+*(Insert architecture image if available)*  
+Example:
 
-<span style="font-size:26px; font-weight:700;">🔐 Authentication Rules</span>
+yaml
+Copy code
 
-✔ Only emails ending with @vitstudent.ac.in can create accounts
+---
 
-✔ Admin login uses a predefined, manually created account
+## 📐 Design Documents
 
-✔ No email verification required
+Stored inside `/docs`:
 
-✔ No auto-logout (session persistent until manual logout)
+- System Architecture  
+- System Design  
+- Software Requirements Specification (SRS)  
+- Data Flow Diagram (DFD)  
+- Entity Relationship Diagram (ERD)  
+- UML Diagrams  
+  - Use Case  
+  - Class  
+  - Activity  
+  - Sequence  
 
-✔ Secure password-based login via Supabase Auth
+---
 
-<span style="font-size:26px; font-weight:700;">📁 Tech Stack</span>
-<span style="font-size:22px; font-weight:700;">Frontend</span>
+## 🧪 Testing
 
-Next.js 14
+### Integration Testing
+- Login → Apply → DB insert → Status update  
 
-React
+### Regression Testing
+- Ensuring system stability after new updates  
 
-Tailwind CSS
+### Mutation Testing
+- Invalid input handling  
+- Empty fields  
+- Incorrect date ranges  
+- Unauthorized admin route access  
 
-<span style="font-size:22px; font-weight:700;">Backend / Database</span>
-
-Supabase Authentication
-
-Supabase PostgreSQL
-
-Optional: Supabase Edge Functions
-
-<span style="font-size:22px; font-weight:700;">Deployment</span>
-
-Vercel (CI/CD via GitHub)
-
-<span style="font-size:22px; font-weight:700;">Version Control</span>
-
-GitHub
-
-<span style="font-size:26px; font-weight:700;">🧩 System Architecture</span>
-flowchart LR
-    User([Student User]) --> Frontend[Next.js Frontend]
-    Frontend --> Auth[Supabase Auth]
-    Auth --> DB[(Supabase Database)]
-    Admin([Admin User]) --> Frontend
-    Frontend --> DB
-
-<span style="font-size:26px; font-weight:700;">📐 Design Documents</span>
-
-All design diagrams are included in the /docs folder:
-
-✔ System Architecture
-
-✔ System Design
-
-✔ SRS
-
-✔ DFD
-
-✔ ERD
-
-✔ UML Diagrams
-
-Use Case
-
-Class
-
-Sequence
-
-Activity
-
-<span style="font-size:26px; font-weight:700;">🧪 Testing</span>
-<span style="font-size:22px; font-weight:700;">💡 Integration Testing</span>
-
-End-to-end validation of:
-
-Login → Apply → DB Insert → Status Update
-
-<span style="font-size:22px; font-weight:700;">♻ Regression Testing</span>
-
-Ensuring no existing functionality breaks after updates.
-
-<span style="font-size:22px; font-weight:700;">🧬 Mutation Testing</span>
-
-Testing system behavior under invalid/mutated inputs.
-
-<span style="font-size:22px; font-weight:700;">📸 Test Screenshots</span>
-
-Add your screenshots in:
+Testing screenshots stored inside:
 
 /screenshots/integration_test.png
 /screenshots/regression_test.png
 /screenshots/mutation_test.png
 
-<span style="font-size:26px; font-weight:700;">🛠️ Installation & Setup</span>
-<span style="font-size:22px; font-weight:700;">Clone the repository</span>
-git clone https://github.com/yourusername/leave-application-system.git
-cd leave-application-system
+yaml
+Copy code
 
-<span style="font-size:22px; font-weight:700;">Install dependencies</span>
+---
+
+## 🛠 Installation & Setup
+
+### 1. Clone the Repository
+git clone https://github.com/r1tvic/v0-leave-application-system-v6
+cd v0-leave-application-system-v6
+
+shell
+Copy code
+
+### 2. Install Dependencies
 npm install
 
-<span style="font-size:22px; font-weight:700;">Environment variables</span>
+shell
+Copy code
 
-Create .env.local:
-
+### 3. Create `.env.local`
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
 
-<span style="font-size:22px; font-weight:700;">Run the project</span>
+shell
+Copy code
+
+### 4. Start Development Server
 npm run dev
 
-<span style="font-size:22px; font-weight:700;">Deploy to Vercel</span>
+shell
+Copy code
+
+### 5. Deploy to Vercel
 vercel
 
-<span style="font-size:26px; font-weight:700;">📦 Folder Structure</span>
+yaml
+Copy code
+
+---
+
+## 📂 Folder Structure
+
 project/
 │── app/
-│   ├── login/
-│   ├── signup/
-│   ├── dashboard/
-│   ├── admin/
-│   ├── api/
+│ ├── login/
+│ ├── signup/
+│ ├── dashboard/
+│ ├── admin/
+│ ├── api/
 │── components/
 │── lib/
 │── docs/
 │── screenshots/
+│── public/
 │── README.md
 
-<span style="font-size:26px; font-weight:700;">📸 Screenshots</span>
+yaml
+Copy code
 
-Add your images:
+---
 
-Login Page
+## 📸 Screenshots
 
-Signup Page
+Place screenshots in `/screenshots/`:
 
-User Dashboard
+- Login Page  
+- Signup Page  
+- User Dashboard  
+- Apply Leave Page  
+- Leave History  
+- Admin Panel  
+- Approve / Reject Page  
 
-Apply Leave Form
+---
 
-Leave History
+## 🎥 Project Demo
 
-Admin Pending Requests
+Add your demo link here:
 
-Approve / Reject Screens
+https://your-demo-link.com
 
-<span style="font-size:26px; font-weight:700;">🎥 Project Demo</span>
+yaml
+Copy code
 
-📌 Add your video demo link here (YouTube, Drive, or Loom)
+---
 
-<span style="font-size:26px; font-weight:700;">📚 Project Report (DA3 PDF)</span>
+## 📚 DA3 Project Report
 
-Your full project report is included in:
+Store your final PDF here:
 
 /docs/DA3_Project_Report.pdf
 
+yaml
+Copy code
 
-Includes:
+Report includes:
+- Problem Statement  
+- User Stories  
+- System Architecture  
+- Test Plans  
+- SRS  
+- DFD  
+- ERD  
+- UML Diagrams  
+- GitHub Repository Link  
 
-Problem Statement
+---
 
-User Stories
+## 👤 Author
 
-Architecture & System Design
+**Ritvic Vijay**  
+23BCE1800  
+Vellore Institute of Technology  
 
-Test Plan
+---
 
-SRS
+## ⭐ Support
 
-DFD
+If this project helped you, please star ⭐ the repository!
 
-ERD
-
-UML
-
-GitHub Link
-
-<span style="font-size:26px; font-weight:700;">👨‍💻 Author</span>
-
-Ritvic Vijay
-23BCE1800
-Vellore Institute of Technology
-
-<span style="font-size:26px; font-weight:700;">⭐ Support</span>
-
-If you found this project useful, please consider starring ⭐ the repo on GitHub!
+GitHub: https://github.com/r1tvic/v0-leave-application-system-v6
